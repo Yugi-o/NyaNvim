@@ -91,6 +91,10 @@ which_key.register({
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		m = { "<cmd>Mason<cr>", "Mason" },
 	},
+	E = {
+		name = "Extra",
+		m = { "<cmd>MarkdownPreviewToggle<cr>", "Markdown Preview" },
+	},
 }, {
 	mode = "n",
 	prefix = "<leader>",
