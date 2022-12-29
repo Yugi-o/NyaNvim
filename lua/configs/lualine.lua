@@ -25,7 +25,19 @@ local config = {
 			inactive = { c = { fg = colors.fg, bg = colors.bg } },
 		},
 		disabled_filetypes = {
-			statusline = { "DiffviewFiles", "alpha", "dashboard", "NvimTree", "Outline", "toggleterm" },
+			statusline = {
+				"DiffviewFiles",
+				"alpha",
+				"dashboard",
+				"NvimTree",
+				"Outline",
+				"toggleterm",
+				"mason",
+				"neo-tree",
+				"lspinfo",
+				"packer",
+				"TelescopePrompt",
+			},
 			winbar = {},
 		},
 	},
@@ -82,9 +94,7 @@ ins_left({
 	fmt = function(str)
 		return str:lower():gsub("^%l", string.upper)
 	end,
-	-- color = { fg = "#000000", bg = colors.magenta, gui = "bold" },
 	color = function()
-		-- auto change color according to neovims mode
 		local mode_color_bg = {
 			n = colors.magenta,
 			i = colors.red,
@@ -176,7 +186,6 @@ ins_left({
 	function()
 		return "NyaNvim"
 	end,
-	-- color = { fg = colors.magenta, gui = "bold" },
 	color = function()
 		local mode_color_fg = {
 			n = colors.magenta,
@@ -224,7 +233,6 @@ ins_right({
 ins_right({
 	"progress",
 	color = function()
-		-- auto change color according to neovims mode
 		local mode_color_bg = {
 			n = colors.magenta,
 			i = colors.red,
